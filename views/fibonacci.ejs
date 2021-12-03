@@ -1,0 +1,16 @@
+<% include top %>
+
+    <% if (typeof fiboval !=="undefined" ) { %>
+
+        <p>Liczba Fibonacciego numer <%= fibonum %> wynosi <%= fiboval %>
+        </p>
+        <hr />
+        <% } %>
+            <p>Wprowadź liczbę, aby zobaczyć jej wartość w ciągu Fibonacciego</p>
+            <form name='fibonacci' action='/fibonacci' method='get'>
+
+                <input type='text' name='fibonum' />
+                <input type='submit' value='Wyślij' />
+
+            </form>
+            <% include bottom %>
