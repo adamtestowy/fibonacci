@@ -9,3 +9,16 @@ before_install:
 
 script:
   - docker run -e CI=true adamtestowy/fibonacci npm run start
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "fibonacci-app"
+  env: "fibonacciapp-env"
+  bucket_name: "elasticbeanstalk-us-east-2-714407507550"
+  bucket_path: "fibonacci-app"
+  edge: true
+  on:
+    branch: main
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
