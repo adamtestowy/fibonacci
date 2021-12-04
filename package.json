@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "DEBUG=fibonacci:* node ./bin/www",
-    "build": "node ./bin/www"
+    "build": "DEBUG=fibonacci:* node ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
